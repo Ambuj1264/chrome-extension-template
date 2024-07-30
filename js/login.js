@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const email = emailInput.value.trim().toLowerCase();
       const password = passwordInput.value.trim();
       console.log(email, "email");
-      const url = "https://fb-tool-node.devtrust.biz/graphql";
+      const url = "https://fb-tool-node.socialmotion.biz/graphql";
       const data = {
         input: {
           email: email,

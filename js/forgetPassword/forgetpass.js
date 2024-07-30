@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (isValidToken && isValidPassword && isValidateConfirmPassword) {
         const token = tokenInput.value.trim();
         const password = passwordInput.value.trim();
-        const url = "https://fb-tool-node.devtrust.biz/graphql";
+        const url = "https://fb-tool-node.socialmotion.biz/graphql";
         const data = {
           input: {
             refressToken: token,

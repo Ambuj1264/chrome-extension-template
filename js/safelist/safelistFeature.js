@@ -47,7 +47,7 @@ async function createFriendsListItems(friends) {
       "red"
     );
   }
-  const url = "https://fb-tool-node.devtrust.biz/graphql";
+  const url = "https://fb-tool-node.socialmotion.biz/graphql";
   try {
     const response = await fetch(url, {
       method: "POST",
@@ -125,7 +125,7 @@ document
       toast("Please add the user", "error", "red");
       return false;
     }
-    const url = "https://fb-tool-node.devtrust.biz/graphql";
+    const url = "https://fb-tool-node.socialmotion.biz/graphql";
     const data = {
       input: selectedFriends,
     };
@@ -173,7 +173,7 @@ document
   });
 
 window.onload = async function () {
-  const url = "https://fb-tool-node.devtrust.biz/graphql";
+  const url = "https://fb-tool-node.socialmotion.biz/graphql";
   try {
     const response = await fetch(url, {
       method: "POST",
@@ -256,7 +256,7 @@ function removeSafeList(selectedIds) {
         toast("Please add the user", "error", "red");
         setTimeout(() => {}, 2000);
       }
-      const url = "https://fb-tool-node.devtrust.biz/graphql";
+      const url = "https://fb-tool-node.socialmotion.biz/graphql";
       const data = {
         ids: newSelectedIds,
       };
@@ -305,7 +305,7 @@ document.getElementById("searchId").addEventListener("keypress", async (e) => {
   const searchData = document.getElementById("searchId").value;
   if (searchData) {
     if (e.key === "Enter") {
-      const url = "https://fb-tool-node.devtrust.biz/graphql";
+      const url = "https://fb-tool-node.socialmotion.biz/graphql";
       const data = {
         data: searchData,
       };
@@ -344,7 +344,7 @@ document.getElementById("searchId").addEventListener("keypress", async (e) => {
       }
     }
   } else {
-    const url = "https://fb-tool-node.devtrust.biz/graphql";
+    const url = "https://fb-tool-node.socialmotion.biz/graphql";
     try {
       const response = await fetch(url, {
         method: "POST",

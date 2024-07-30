@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (isValidEmail) {
         const email = emailInput.value.trim().toLowerCase();
      
-        const url = "https://fb-tool-node.devtrust.biz/graphql";
+        const url = "https://fb-tool-node.socialmotion.biz/graphql";
         const data = {
             "email": email
           };
