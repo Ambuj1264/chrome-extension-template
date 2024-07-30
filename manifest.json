@@ -1,0 +1,57 @@
+{
+
+  "name": "EMS",
+  "version": "20.20.163",
+  "description": "EMS simplifies, automates, and accelerates the process of connecting with your ideal, targeted prospects via Facebook.",
+  "short_name": "LP",
+  "icons": {
+    "16": "img/icon-4.png",
+    "48": "img/icon-4.png",
+    "128": "img/icon-4.png"
+  },
+  "action": {
+    "default_title": "EMS",
+    "default_popup": "login.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.facebook.com/*", "*://facebook.com/*"],
+      "js": ["./js/login.js","./js/content/content.js","./js/request-cancellation.js","js/FancyText/fancyText.js","./js/group-remover.js"],
+      "css": ["css/style.css", "css/responsive.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "background": {
+    "service_worker": "js/background/background.js"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "permissions": [
+    "https://www.facebook.com/",
+    "cookies",
+    "notifications",
+    "tabs",
+    "activeTab",
+    "storage",
+    "scripting",
+    "unlimitedStorage",
+    "clipboardRead",
+    "declarativeNetRequest"
+ 
+  ],
+  "host_permissions": ["*://*.facebook.com/*"],
+  "web_accessible_resources": [
+    {
+      "resources": ["index.html","js/deleteMessage/fb.js","js/deleteMessage/jquery.min.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "manifest_version": 3
+}

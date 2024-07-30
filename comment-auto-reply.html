@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Font CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aladin&family=Corben:wght@400;700&family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&family=Dancing+Script:wght@500&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Kaushan+Script&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,200;0,300;0,500;0,700;0,800;0,900;1,200;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Pinyon+Script&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/roboto" rel="stylesheet">
+
+    <title>FB Tool | Comment Auto Reply</title>
+
+  </head>
+  <body>
+
+
+    <header class="p-3">
+        <div class="container-fluid">
+          <div class="d-flex align-items-center justify-content-center justify-content-between">
+            <a href="/index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+            </a>
+
+            <form class="col-lg-9 col-6 col-lg-auto mb-lg-0 me-lg-3">
+              <a href="/index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+                <img src="img/logo.png" alt="logo">
+               </a>
+            </form>
+    
+            <div class="dropdown text-end">
+              <a href="#" class="d-block link-dark text-decoration-none " id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="img/user.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                <span id="userName_id"> Dean Glover</span>
+              </a>
+
+              <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                <li><a class="dropdown-item" href="#">New project...</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#" id="logout">Sign out</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+
+<section class="request_cancellation_page py-4">
+  <div class="container">
+<div class="request_heading d-flex align-items-center flex-start gap-3 mb-3">
+  <div class="icon_pic">
+    <img src="img/icon-2.png">
+  </div>
+  <div class="request_text">
+    <h3>Comment Auto Reply</h3>
+    <p>Auto reply to the comments on Facebook</p>
+  </div>
+</div>
+
+<div class="request_card">
+
+  <div class="comment_wrap py-5 py-lg-5">
+    <h5>Please enter the details below</h5>
+
+<div class="row g-4">
+      <div class="col-lg-6">
+      <div class="mb-3 position-relative select_post">
+      <label for="formGroupExampleInput" class="form-label">Select the post containing the comments</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+      <span><a href="#">Select Post</a></span>
+    </div> 
+    </div>
+
+    <div class="col-lg-6">
+      <div class="mb-3">
+      <label for="formGroupExampleInput" class="form-label">Seconds between each reply</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Seconds">
+    </div> 
+    </div>
+
+    <div class="col-lg-12">
+      <div class="mb-3 position-relative textarea_text">
+        <label for="formGroupExampleInput" class="form-label">Your reply message (you can enter multiple versions)</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <span><a href="#" data-bs-toggle="modal" data-bs-target="#reply_modal">Add Reply</a></span>
+    </div> 
+    </div>
+
+    <div class="col-lg-12">
+      <div class="mb-3 position-relative textarea_text">
+        <label for="formGroupExampleInput" class="form-label">Keyword/Phrase Filters (Optional)</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <span><a href="#">Add Filter</a></span>
+    </div> 
+    </div>
+
+  </div>
+    <div class="mb-3 d-flex justify-content-center">
+     <button class="btn btn-pripary">Start Auto Comment</button>
+    </div>
+  </div>
+
+</div>
+
+  </div>
+</section>
+
+
+<!-- Modal Add Reply -->
+<div class="modal fade" id="reply_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="reply_modalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Reply Text</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+      </div>
+      <div class="modal-body">
+        <div class="reply_content">
+          <label for="formGroupExampleInput" class="form-label">Reply</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-primary">Add Text</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script src="bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/auth.js"></script>
+<script src="jquery/jquery-3.7.1.min.js"></script>
+
+  </body>
+</html>
+
+
+
+

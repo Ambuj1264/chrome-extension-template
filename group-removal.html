@@ -1,0 +1,139 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+      <!-- Datatable -->
+  <link rel="stylesheet" href="datatables/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="datatables/dataTables.bootstrap4.min.css">
+    <!-- Font CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aladin&family=Corben:wght@400;700&family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&family=Dancing+Script:wght@500&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Kaushan+Script&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,200;0,300;0,500;0,700;0,800;0,900;1,200;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Pinyon+Script&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <title>FB Tool | Group Removal</title>
+
+  </head>
+  <body>
+
+
+    <header class="p-3">
+        <div class="container-fluid">
+          <div class="d-flex align-items-center justify-content-center justify-content-between">
+            <a href="index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+            </a>
+
+            <form class="col-lg-9 col-6 col-lg-auto mb-lg-0 me-lg-3">
+              <a href="index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+                <img src="img/logo.png" alt="logo">
+               </a>
+            </form>
+    
+            <div class="dropdown text-end">
+              <a href="#" class="d-block link-dark text-decoration-none " id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="img/user.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                <span id="userName_id"> Dean Glover</span>
+              </a>
+
+              <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                <li><a class="dropdown-item" href="#">New project...</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#" id="logout">Sign out</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+
+      <section class="request_cancellation_page py-4">
+        <div class="container">
+          <div class="request_heading d-flex align-items-center justify-content-between my-4">
+            <div class="block_text d-flex align-items-center gap-3">
+              <div class="icon_pic">
+                <img src="img/icon-5.png">
+              </div>
+              <div class="request_text">
+                <h3>Group Removal</h3>
+                <p>Leave multiple Facebook group on just few click</p>
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary" id="fetch_groups">Fetch Groups</button>
+          </div>
+          <div class="request_card px-3 py-3">
+            <div class="table_block">
+              <div class="card border-0 mb-4">
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table table-striped" id="dataTable" width="100%" cellspacing="0">
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Last Visited Time</th>
+                          <th>ID</th>
+                          <th>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            </div>
+                          </th>
+    
+    
+                        </tr>
+                      </thead>
+                   
+                        <tbody id="grouptBodyData">
+                     
+                      </tbody>
+                    </table>
+    
+                    <div class="delete_block d-flex align-items-center justify-content-between my-3">
+                      <button class="btn btn-primary" id="removeGroupsButton">Delete</button>
+                      <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+            </div>
+    
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+   
+    <!-- <script src="datatables/jquery.dataTables.js"></script>
+    <script src="datatables/jquery.dataTables.min.js"></script>
+    <script src="datatables/dataTables.bootstrap4.js"></script>
+    <script src="datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="datatables/datatables-demo.js"></script>   -->
+    <script src="js/auth.js"></script>
+    <script src="js/group-remover.js"></script>
+  </body>
+</html>
+
+
+
